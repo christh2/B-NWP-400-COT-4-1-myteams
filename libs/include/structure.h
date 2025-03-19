@@ -1,0 +1,15 @@
+/*
+** EPITECH PROJECT, 2024
+** cpp project
+** File description:
+** MyTek 2 project
+*/
+
+#include "server.h"
+
+#ifndef B_NWP_400_COT_4_1_MYTEAMS_CHRIST_HOUNKANRIN_STRUCTURE_H
+    #define B_NWP_400_COT_4_1_MYTEAMS_CHRIST_HOUNKANRIN_STRUCTURE_H
+
+
+
+#endif //B_NWP_400_COT_4_1_MYTEAMS_CHRIST_HOUNKANRIN_STRUCTURE_H

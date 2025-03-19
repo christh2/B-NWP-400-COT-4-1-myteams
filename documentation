@@ -1,0 +1,57 @@
+EPITECH Myteams Protocol
+
+***SOMMAIRE
+
+    Paquets liés au client
+    Paquets liés au serveur
+
+/**/Paquets liés au client
+
+Commandes ne nécessitant pas de connexion préalable:
+    /help : code de retour ...
+    /login [“user_name”] : Il prend en paramètre un nom d'utilisateur et permet de se connecter au serveur.
+    /users : In ne prend aucun paramètre et consiste à lister tous les utilisateurs enregistrés.
+    /user [“user_uuid”] : l prend en paramètre l'UUID d'un utilisateur existant afin d'en fournir les informations.
+    /subscribe [“team_uuid”] : Il prend en paramètre l'identifiant d'une équipe. Le paquet permet de soucrire à l'équipe souhaitée.
+    /unsubscribe [“team_uuid”] : Il prend l'UUID d'une équipe en paramètre. Son utilisation permet de se désabonner de l'équipe stipulée.
+    /create : 
+    /list : Il ne prend aucuns paramètres. Il va permettre de récupérer toutes les équipes.
+    /info : Il ne prend aucuns paramètres. Il va récupérer les informations relatives à l'utilisateur connecté.
+
+Commandes nécessitant une connexion préalable :
+    /logout : Il déconnecte un utilisateur du serveur.
+    /send [“user_uuid”]: Il prend l'UUID d'un utilisateur connecté ainsi qu'un message. L'objectif de ce paquet est d'envoyer un message à un utilisateur.
+    /messages [“user_uuid”] : L'UUID d'un utilisateur est passé en paramètre. ce paquet liste tous les messages échangés avec l'utilisateur indiqué.
+    /subscribed ?[“team_uuid”] : Elle prend en paramètre l'UUID d'une équipe déjà existante. Ce paquet consiste à lister les utilisateurs abonnés à l'équipe mentionnée. 
+    /use ?[“team_uuid”] ?[“channel_uuid”] ?[“thread_uuid”] :
+    /create [“team_name”] [“team_description”] : Il prend un nom et une description. Il permet de créer une équipe.
+    /create [“channel_name”] [“channel_description”] : Il prend un nom et une description. Il permet de créer une équipe.
+    /create [“thread_title”] [“thread_message”] : Il prend l'UUID de l'équipe, puis du cannal dans laquelle il doit être créé, un titre et un message en paramètres. Il permet de créer une discussion.
+    /create [“team_uuid”] [chanel_uuid]: Il prend l'UUID de l'équipe, puis du cannal, puis de la discussion dans laquelle il doit être créé et un message en paramètres. Il permet de répondre à une discussion
+    /list : Il ne prend aucuns paramètres. Il va permettre de récupérer toutes les équipes.
+    /info : Il ne prend aucuns paramètres. Il va récupérer les informations relatives à l'utilisateur connecté.
+
+
+
+/**/Paquets liés au serveur
+
+    220 Welcome on the matrix  : lorssque  le client ce connecte aau server avec une ip et un port 
+    
+
+        /login "ttt" New user: ttt (18c68fb5-39ba-4e44-9b4d-4185001a0c0f).
+                     User 18c68fb5-39ba-4e44-9b4d-4185001a0c0f logged in.
+    
+        /user 18c68fb5-39ba-4e44-9b4d-4185001a0c0f
+                Unknown user (null)
+        /user "18c68fb5-39ba-4e44-9b4d-4185001a0c0f"
+                User "ttt" (18c68fb5-39ba-4e44-9b4d-4185001a0c0f): 1
+
+
+        /users : la reponse du server lorsque la commandes users est lancer
+                User "9e66a479-cba9-4bf7-b1f6-1b537e4e691f" (omer dedo): 0
+                User "fa457bb9-8c8f-4337-91cc-0b69cfaf900f" (lol): 0
+                User "72c87471-96ab-48af-9fb5-ed116d924a9b" (ted): 0
+                User "07e43b7c-be87-408d-bf89-cab19c6598ce" (hans): 0
+                User "18c68fb5-39ba-4e44-9b4d-4185001a0c0f" (ttt): 1
+            
+    
